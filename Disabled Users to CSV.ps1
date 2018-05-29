@@ -1,0 +1,2 @@
+﻿Get-ADUser -Filter  {(Enabled -eq $false)} | ? { ($_.distinguishedname -notlike '*inactive*')} | Export-Csv -Path $home\desktop\export\disabled_users.csv -Encoding ascii -NoTypeInformation
+Invoke-Item $home\desktop\export\disabled_users.csv

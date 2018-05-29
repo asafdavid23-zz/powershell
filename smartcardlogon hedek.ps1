@@ -1,0 +1,1 @@
+﻿Get-ADUser -Filter * -Properties 'SmartcardLogonRequired' | select name, smartcardlogonrequired,DistinguishedName |Export-Csv -Path $home\desktop\smartcard.csv -Encoding ascii -NoTypeInformation

@@ -1,0 +1,2 @@
+﻿Import-Module ActiveDirectory
+Get-ADUser -Filter  {(Enabled -eq $true)} -Properties sAMAccountName, company, department, physicalDeliveryOfficeName, streetAddress, title, manager, homephone, telephonenumber, mobile | ? { ($_.distinguishedname -like '*Traffilog Users*')}  | Select sAMAccountName, company, department, physicalDeliveryOfficeName, streetAddress, title, manager, homephone, telephonenumber, mobile | Export-Csv -Path $home\desktop\export\ILusers.csv -Encoding ascii -NoTypeInformation

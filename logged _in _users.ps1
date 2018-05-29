@@ -1,0 +1,1 @@
+﻿Get-ADComputer -Filter * -SearchBase "CN=Computers,DC=in,DC=traffilog,DC=co,DC=il" -Properties * | Select cn,lastlogondate | Export-csv -path 	C:\Users\assafd\Desktop\Work\PowerShell_Scripts\Loginusers.csv -encoding ascii -notypeinformation
